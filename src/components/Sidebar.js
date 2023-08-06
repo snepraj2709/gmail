@@ -2,7 +2,7 @@ import {
   MdMenu,
   MdLabelImportantOutline,
   HiOutlineInbox,
-  HiOutlineStar,
+  AiOutlineStar,
   MdDeleteOutline,
   MdSend,
 } from "../utils/icons";
@@ -50,7 +50,7 @@ function Sidebar() {
             ? `${classes} text-blue-500`
             : `${classes} text-gray-800`;
         }}>
-        <HiOutlineStar className="sidebarIcon" />
+        <AiOutlineStar className="sidebarIcon" />
         <b
           className="hidden md:inline-block my-auto"
           onClick={() => navigate("/watchlist")}>

@@ -7,19 +7,20 @@ import {
   MdSend,
   MdDeleteOutline,
   MdLabelImportantOutline,
+  MdLabelImportant,
 } from "react-icons/md";
 import { FaUser, FaSun, FaMoon } from "react-icons/fa";
 import { RxCross2 } from "react-icons/rx";
 import {
   HiOutlineInbox,
-  HiOutlineStar,
   HiOutlineClock,
   HiDotsVertical,
   HiOutlineReply,
 } from "react-icons/hi";
+import { AiOutlineStar } from "react-icons/ai";
 import { FaLinkedinIn, FaGithub, FaTwitter } from "react-icons/fa";
 
-import { AiOutlineDown } from "react-icons/ai";
+import { AiOutlineDown, AiFillStar } from "react-icons/ai";
 import { SiGmail } from "react-icons/si";
 
 export {
@@ -31,9 +32,11 @@ export {
   MdSend,
   MdDeleteOutline,
   MdLabelImportantOutline,
+  MdLabelImportant,
   RxCross2,
   HiOutlineInbox,
-  HiOutlineStar,
+  AiOutlineStar,
+  AiFillStar,
   HiOutlineReply,
   HiOutlineClock,
   HiDotsVertical,

@@ -262,7 +262,7 @@ export const fetchMail = (url) => {
               media: "",
               createdAt: formatDate(),
               updatedAt: formatDate(),
-              read: false,
+              read: true,
               replies: [
                 {
                   mailId: 2,
@@ -466,7 +466,7 @@ export const fetchMail = (url) => {
               media: "",
               createdAt: formatDate(),
               updatedAt: formatDate(),
-              read: false,
+              read: true,
               replies: [
                 {
                   mailId: 20,
