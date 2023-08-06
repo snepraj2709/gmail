@@ -8,20 +8,26 @@ import {
   MdDeleteOutline,
   MdLabelImportantOutline,
   MdLabelImportant,
+  MdArrowBack,
+  MdOutlineArchive,
+  MdKeyboardArrowRight,
+  MdKeyboardArrowLeft,
+  MdArrowDropDown,
 } from "react-icons/md";
 import { FaUser, FaSun, FaMoon } from "react-icons/fa";
 import { RxCross2 } from "react-icons/rx";
-import {
-  HiOutlineInbox,
-  HiOutlineClock,
-  HiDotsVertical,
-  HiOutlineReply,
-} from "react-icons/hi";
-import { AiOutlineStar } from "react-icons/ai";
+import { HiOutlineInbox, HiOutlineClock, HiDotsVertical } from "react-icons/hi";
 import { FaLinkedinIn, FaGithub, FaTwitter } from "react-icons/fa";
 
-import { AiOutlineDown, AiFillStar } from "react-icons/ai";
+import {
+  AiOutlineDown,
+  AiFillStar,
+  AiOutlineMail,
+  AiOutlineStar,
+} from "react-icons/ai";
 import { SiGmail } from "react-icons/si";
+import { RiSpam2Line } from "react-icons/ri";
+import { CgMailForward, CgMailReply } from "react-icons/cg";
 
 export {
   MdSearch,
@@ -37,7 +43,6 @@ export {
   HiOutlineInbox,
   AiOutlineStar,
   AiFillStar,
-  HiOutlineReply,
   HiOutlineClock,
   HiDotsVertical,
   AiOutlineDown,
@@ -48,4 +53,13 @@ export {
   FaLinkedinIn,
   FaGithub,
   FaTwitter,
+  MdArrowBack,
+  MdOutlineArchive,
+  RiSpam2Line,
+  AiOutlineMail,
+  MdKeyboardArrowRight,
+  MdKeyboardArrowLeft,
+  MdArrowDropDown,
+  CgMailForward,
+  CgMailReply,
 };

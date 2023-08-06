@@ -1,6 +1,13 @@
 import { allActions } from "../utils/constants";
-const { SetInbox, SetSendMails, Bookmark, Star, MarkRead, DeleteMail } =
-  allActions;
+const {
+  SetInbox,
+  SetSendMails,
+  Bookmark,
+  Star,
+  MarkRead,
+  DeleteMail,
+  SetCurrentMail,
+} = allActions;
 
 export const MailReducer = (state, { type, payload }) => {
   switch (type) {
@@ -38,6 +45,11 @@ export const MailReducer = (state, { type, payload }) => {
         allMails: updatedMails,
       };
     }
+    case SetCurrentMail:
+      return {
+        ...state,
+        currentMail: payload,
+      };
     default:
       return state;
   }

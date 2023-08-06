@@ -6,6 +6,7 @@ export const allActions = {
   Star: "STAR",
   MarkRead: "MARK_READ",
   DeleteMail: "DELETE_MAIL",
+  SetCurrentMail: "SET_CURRENT_MAIL",
 };
 export const DefaultUserAvatar =
   "https://res.cloudinary.com/dqg4mckho/image/upload/v1688744337/Zitter-project-2/profile-pic-5_qowily.jpg";
