@@ -43,6 +43,7 @@ export const MailReducer = (state, { type, payload }) => {
       return {
         ...state,
         allMails: updatedMails,
+        trash: [...state?.trash, payload],
       };
     }
     case SetCurrentMail:
