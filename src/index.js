@@ -5,15 +5,18 @@ import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import { BrowserRouter } from "react-router-dom";
 import { MailProvider, useMail } from "./context/MailContext";
-export { useMail };
+import { ThemeProvider, useTheme } from "./context/ThemeContext";
+export { useMail, useTheme };
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
     <BrowserRouter>
-      <MailProvider>
-        <App />
-      </MailProvider>
+      <ThemeProvider>
+        <MailProvider>
+          <App />
+        </MailProvider>
+      </ThemeProvider>
     </BrowserRouter>
   </React.StrictMode>
 );
