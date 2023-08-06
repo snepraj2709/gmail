@@ -33,7 +33,12 @@ function Iconbar({ important }) {
         <div className="col-span-9 flex justify-start space-x-3">
           <MdOutlineArchive className="iconSize7" />
           <RiSpam2Line className="iconSize7" />
-          <MdDeleteOutline className="iconSize7" />
+          <MdDeleteOutline
+            className="iconSize7"
+            onClick={() =>
+              dispatch({ tyep: allActions.DeleteMail, payload: currentMail })
+            }
+          />
           <AiOutlineMail className="iconSize7" />
           <HiOutlineClock className="iconSize7" />
           <div

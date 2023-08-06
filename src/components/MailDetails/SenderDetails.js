@@ -10,14 +10,14 @@ import { allActions } from "../../utils/constants";
 import { useMail } from "../../context/MailContext";
 import { timeAgo } from "../../utils/functions";
 
-function SenderDetails({ mail }) {
-  console.log(mail);
+function SenderDetails() {
   const { state, dispatch } = useMail();
   const { sender, starred, createdAt } = state?.currentMail;
   const time = timeAgo(createdAt);
+
   return (
     <div className="grid grid-cols-12 h-10">
-      <div className="col-span-1">
+      <div className="col-span-1 m-2">
         <UserAvatar user={sender} />
       </div>
       <div className="col-span-6">
@@ -34,7 +34,7 @@ function SenderDetails({ mail }) {
           onClick={() =>
             dispatch({
               type: allActions.Star,
-              payload: { ...mail, starred: !mail?.starred },
+              payload: { ...state?.currentMail, starred: !starred },
             })
           }>
           {starred ? (

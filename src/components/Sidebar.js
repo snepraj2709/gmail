@@ -6,10 +6,9 @@ import {
   MdDeleteOutline,
   MdSend,
 } from "../utils/icons";
-import { NavLink, useNavigate } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 function Sidebar() {
-  const navigate = useNavigate();
   const classes =
     "flex justify-start px-1 cursor-pointer bg-slate-100 h-10 rounded-full hover:text-blue-500 group my-2";
 
@@ -23,11 +22,7 @@ function Sidebar() {
             : `${classes} text-gray-800`;
         }}>
         <HiOutlineInbox className="sidebarIcon" />
-        <b
-          className="hidden md:inline-block my-auto"
-          onClick={() => navigate("/explore")}>
-          Inbox
-        </b>
+        <b className="hidden md:inline-block my-auto">Inbox</b>
       </NavLink>
       <NavLink
         to="/important"
@@ -37,11 +32,7 @@ function Sidebar() {
             : `${classes} text-gray-800`;
         }}>
         <MdLabelImportantOutline className="sidebarIcon" />
-        <b
-          className="hidden md:inline-block my-auto"
-          onClick={() => navigate("/liked")}>
-          Important
-        </b>
+        <b className="hidden md:inline-block my-auto">Important</b>
       </NavLink>
       <NavLink
         to="/starred"
@@ -51,11 +42,7 @@ function Sidebar() {
             : `${classes} text-gray-800`;
         }}>
         <AiOutlineStar className="sidebarIcon" />
-        <b
-          className="hidden md:inline-block my-auto"
-          onClick={() => navigate("/watchlist")}>
-          Starred
-        </b>
+        <b className="hidden md:inline-block my-auto">Starred</b>
       </NavLink>
       <NavLink
         to="/trash"
@@ -65,11 +52,7 @@ function Sidebar() {
             : `${classes} text-gray-800`;
         }}>
         <MdDeleteOutline className="sidebarIcon" />
-        <b
-          className="hidden md:inline-block my-auto"
-          onClick={() => navigate("/playlist")}>
-          Trash
-        </b>
+        <b className="hidden md:inline-block my-auto">Trash</b>
       </NavLink>
       <NavLink
         to="/send"
@@ -79,11 +62,7 @@ function Sidebar() {
             : `${classes} text-gray-800`;
         }}>
         <MdSend className="sidebarIcon" />
-        <b
-          className="hidden md:inline-block my-auto"
-          onClick={() => navigate("/upload")}>
-          Sent
-        </b>
+        <b className="hidden md:inline-block my-auto">Send</b>
       </NavLink>
     </div>
   );

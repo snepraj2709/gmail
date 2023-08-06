@@ -2,8 +2,6 @@ import { useMail } from "../context/MailContext";
 import Sidebar from "../components/Sidebar";
 import Footer from "../components/Footer";
 import Header from "../components/Header";
-import { MailCard } from "../components/MailCard";
-import { MdFilterList } from "../utils/icons";
 import MailDetailComponent from "../components/MailDetails/MailDetailComponent";
 import { useParams } from "react-router-dom";
 import { allActions } from "../utils/constants";
@@ -14,10 +12,8 @@ export default function MailDetails() {
   const currentMail = state?.allMails?.find(
     (mail) => mail.mailId === parseInt(mailId)
   );
-
   dispatch({ tyep: allActions.SetCurrentMail, payload: currentMail });
 
-  console.log("state", currentMail);
   return (
     <div className="min-h-screen flex flex-col">
       <Header />

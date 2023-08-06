@@ -7,8 +7,6 @@ export const MailContext = createContext();
 
 export function MailProvider({ children }) {
   const localStorageToken = JSON.parse(localStorage.getItem("state"));
-  console.log(localStorageToken);
-
   const currentuser = {
     userId: 2,
     email: "emma@example.com",
@@ -34,6 +32,7 @@ export function MailProvider({ children }) {
             inbox: inboxMails,
             send: sendMails,
             currentMail: null,
+            trash: [],
           })
         );
         dispatch({
@@ -52,6 +51,7 @@ export function MailProvider({ children }) {
     inbox: [],
     filtered: [],
     currentMail: null,
+    trash: [],
   };
 
   const [state, dispatch] = useReducer(MailReducer, mailState);
