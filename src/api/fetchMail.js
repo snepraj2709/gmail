@@ -28,7 +28,10 @@ export const fetchMail = (url) => {
               starred: false,
               deleted: false,
               important: true,
-              media: "",
+              media: {
+                src: "https://d2yjqys1j7uhg1.cloudfront.net/images/kickstart-program.svg",
+                alt: "Some Image",
+              },
               createdAt: formatDate(),
               updatedAt: formatDate(),
               read: false,
@@ -219,7 +222,10 @@ export const fetchMail = (url) => {
               starred: true,
               deleted: false,
               important: true,
-              media: "",
+              media: {
+                src: "https://d2yjqys1j7uhg1.cloudfront.net/images/kickstart-program.svg",
+                alt: "Some Image",
+              },
               createdAt: formatDate(),
               updatedAt: formatDate(),
               read: false,

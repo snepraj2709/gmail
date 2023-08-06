@@ -6,6 +6,9 @@ import { allActions } from "../utils/constants";
 export const MailContext = createContext();
 
 export function MailProvider({ children }) {
+  const localStorageToken = JSON.parse(localStorage.getItem("state"));
+  console.log(localStorageToken);
+
   const currentuser = {
     userId: 2,
     email: "emma@example.com",
@@ -23,7 +26,16 @@ export function MailProvider({ children }) {
         const sendMails = data?.filter(
           (mail) => mail.sender.email === currentuser.email
         );
-        console.log({ allMails: data, inbox: inboxMails, send: sendMails });
+
+        localStorage.setItem(
+          "state",
+          JSON.stringify({
+            allMails: data,
+            inbox: inboxMails,
+            send: sendMails,
+            currentMail: null,
+          })
+        );
         dispatch({
           type: allActions.SetInbox,
           payload: { allMails: data, inbox: inboxMails, send: sendMails },
@@ -39,6 +51,7 @@ export function MailProvider({ children }) {
     send: [],
     inbox: [],
     filtered: [],
+    currentMail: null,
   };
 
   const [state, dispatch] = useReducer(MailReducer, mailState);

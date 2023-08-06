@@ -10,7 +10,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/inbox" element={<Inbox />} />
         <Route path="/send" element={<Send />} />
-        <Route path="/mail/:messageId" element={<MailDetails />} />
+        <Route path="/mail/:mailId" element={<MailDetails />} />
       </Routes>
     </div>
   );

@@ -4,3 +4,9 @@
 .sidebarIcon {
   @apply w-6 h-6 mx-2 my-auto group-hover:scale-125 transition-transform duration-150 ease-in-out;
 }
+.iconSize7 {
+  @apply mr-1 w-7 h-7 cursor-pointer;
+}
+.mainContainerGrid {
+  @apply flex flex-col col-span-6 border-r-2 border-l-2 border-slate-300 dark:border-white mx-auto min-w-full;
+}

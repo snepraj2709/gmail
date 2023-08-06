@@ -27,7 +27,9 @@ function Header() {
   return (
     <div className="bg-blue-400 dark:bg-blue-950">
       <div className="flex flex-row justify-between my-2 lg:max-w-6xl w-100 mx-auto">
-        <div className="flex ml-3 md:ml-10" onClick={() => navigate("/")}>
+        <div
+          className="flex ml-3 md:ml-10 cursor-pointer"
+          onClick={() => navigate("/")}>
           <SiGmail className="w-6 h-6 mx-1 my-auto text-blue-950 dark:text-blue-100" />
           <h2 className="hidden md:inline-block my-auto font-sans text-lg font-bold">
             Gmail

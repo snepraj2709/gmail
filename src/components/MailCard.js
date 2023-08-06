@@ -21,7 +21,7 @@ export function MailCard({ mail }) {
     createdAt,
     read,
   } = mail;
-  const { Bookmark, Star, MarkRead } = allActions;
+  const { Bookmark, Star, MarkRead, SetCurrentMail } = allActions;
 
   const time = timeAgo(createdAt);
   const navigate = useNavigate();
@@ -34,7 +34,9 @@ export function MailCard({ mail }) {
         type: MarkRead,
         payload: { ...mail, read: true },
       });
+      dispatch({ type: SetCurrentMail, payload: { ...mail, read: true } });
     }
+    dispatch({ type: SetCurrentMail, payload: mail });
   };
 
   return (
@@ -50,9 +52,9 @@ export function MailCard({ mail }) {
                 })
               }>
               {starred ? (
-                <AiFillStar className="mr-1 w-7 h-7 text-yellow-500" />
+                <AiFillStar className="iconSize7 text-yellow-500" />
               ) : (
-                <AiOutlineStar className="mr-1 w-7 h-7" />
+                <AiOutlineStar className="iconSize7" />
               )}
             </div>
             <div
@@ -63,9 +65,9 @@ export function MailCard({ mail }) {
                 })
               }>
               {important ? (
-                <MdLabelImportant className="mr-1 w-7 h-7 text-yellow-500" />
+                <MdLabelImportant className="iconSize7 text-yellow-500" />
               ) : (
-                <MdLabelImportantOutline className="mr-1 w-7 h-7" />
+                <MdLabelImportantOutline className="iconSize7" />
               )}
             </div>
           </div>
