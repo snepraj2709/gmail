@@ -13,11 +13,12 @@ function Header() {
   const location = useLocation();
   const currentUser = { username: "johndoe", password: "12345" };
 
-  const filteredMails = state.allMails?.filter(
-    (mail) => mail.sender.username !== currentUser.username
-  );
+  // console.log(filteredMails);
 
   function searchMails(e) {
+    const filteredMails = state.allMails?.filter(
+      (mail) => mail.sender.username !== currentUser.username
+    );
     setInput(e.target.value);
     e.target.value = ""
       ? dispatch({ type: allActions.FilterMail, payload: state?.allMails })
@@ -40,11 +41,18 @@ function Header() {
           <MdSearch className="w-6 h-6 mx-1 my-auto" />
           <input
             type="text"
+            id="searchMail"
             value={input}
             onClick={() => location?.pathname !== "/" && navigate("/")}
             onChange={(e) => searchMails(e)}
             className="bg-transparent outline-none"
           />
+          <datalist id="searchMail">
+            {state?.allMails?.map((mail) => (
+              <options value={mail.subject}></options>
+            ))}
+            <option value="Sachin Tendulkar" />
+          </datalist>
         </div>
         <div className="flex md:mr-10">
           <FaUser className="w-5 h-5 mx-2 my-auto" />

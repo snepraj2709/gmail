@@ -15,7 +15,7 @@ function Sidebar() {
   return (
     <div className="col-span-2 p-5">
       <NavLink
-        to="/inbox"
+        to="/"
         className={({ isActive }) => {
           return isActive
             ? `${classes} text-blue-500`

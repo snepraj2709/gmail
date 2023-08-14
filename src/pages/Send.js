@@ -1,11 +1,11 @@
+import { useMail } from "../context/MailContext";
 import Sidebar from "../components/Sidebar";
 import Footer from "../components/Footer";
 import Header from "../components/Header";
-import { useMail } from "../context/MailContext";
+import { MdFilterList } from "react-icons/md";
 import { MailCard } from "../components/MailCard";
-import { MdFilterList } from "../utils/icons";
 
-export default function Home() {
+function Send() {
   const { state } = useMail();
 
   return (
@@ -15,13 +15,13 @@ export default function Home() {
         <Sidebar />
         <div className="mainContainerGrid">
           <div className="flex flex-row justify-between py-2">
-            <h2 className="font-bold text-2xl ml-4 pt-4">Inbox</h2>
+            <h2 className="font-bold text-2xl ml-4 pt-4">Send</h2>
             <MdFilterList className="mr-1 w-10 h-10" />
           </div>
           <hr className="border dark:border-white  border-black" />
           <div>
-            {state?.inbox?.length > 0 ? (
-              state?.inbox?.map((mail) => (
+            {state?.send?.length > 0 ? (
+              state?.send?.map((mail) => (
                 <div key={mail.id}>
                   <MailCard mail={mail} />
                   <hr className="border dark:border-gray-360 border-slate-300" />
@@ -29,7 +29,7 @@ export default function Home() {
               ))
             ) : (
               <div className="font-semibold text-lg md:text-xl mt-6 text-center">
-                No mails in Inbox so far.
+                No mails sent so far.
               </div>
             )}
           </div>
@@ -39,3 +39,5 @@ export default function Home() {
     </div>
   );
 }
+
+export default Send;
